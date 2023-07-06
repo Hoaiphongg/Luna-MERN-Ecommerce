@@ -39,10 +39,10 @@ var productSchema = new mongoose.Schema(
       default: 0,
     },
     images: [
-      {
-        public_id: String,
-        url: String,
-      },
+      // {
+      //   public_id: String,
+      //   url: String,
+      // },
     ],
     color: [],
     tags: String,
@@ -53,10 +53,10 @@ var productSchema = new mongoose.Schema(
         postedby: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
       },
     ],
-    // totalrating: {
-    //   type: String,
-    //   default: 0,
-    // },
+    totalrating: {
+      type: String,
+      default: 0,
+    },
   },
   { timestamps: true }
 )
